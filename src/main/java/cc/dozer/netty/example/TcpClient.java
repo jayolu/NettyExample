@@ -132,6 +132,7 @@ public class TcpClient {
     	if(ch!=null && ch.isActive()) {
     		ch.writeAndFlush(msg);
     	} else {
+    		//TODO 异步连接，此处有可能不可用
     		System.out.println("connect error");
     	}
     }
